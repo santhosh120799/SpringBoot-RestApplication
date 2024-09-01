@@ -119,4 +119,27 @@ Path Parameters:
 
 id: The ID of the product (e.g., 1).
 
+## Database Setup
+
+To set up the database schema for this project, follow these steps:
+
+1. **Ensure MySQL is installed and running.**
+
+2. **Create a Database:**
+   - Open your MySQL client and create a new database. For example:
+     ```sql
+     CREATE DATABASE novoSoftTaskApplication;
+     ```
+
+3. **Run the Schema Script:**
+   - If using Spring Boot's automatic script execution, place `schema.sql` in `src/main/resources`.
+   - Alternatively, run the SQL script manually using:
+     ```bash
+     mysql -u root -p novoSoftTaskApplication < src/main/resources/schema.sql
+     ```
+
+4. **Verify the Database:**
+   - Check that the tables and schema are created correctly in your MySQL database.
+
+**Note:** Adjust the database name, user, and other details based on your environment.
 
