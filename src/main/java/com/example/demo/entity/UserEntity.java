@@ -14,11 +14,11 @@ public class UserEntity {
     private String password;
     private String role; // e.g., "ADMIN", "USER"
 
-    // Default constructor (required by JPA)
+  
     public UserEntity() {
     }
 
-    // Constructor with parameters
+   
     public UserEntity(String username, String password, String role) {
         this.username = username;
         this.password = password;
