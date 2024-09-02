@@ -49,7 +49,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         .csrf().disable()
         .authorizeRequests()
         .antMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/v3/api-docs/swagger-config").permitAll() // Allow access to Swagger UI and API docs
-        .antMatchers("/products/**").hasRole("ADMIN") // Protect other endpoints
+        .antMatchers("/products/**").hasRole("ADMIN")
         .anyRequest().authenticated()
         .and()
         .httpBasic();
