@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.entity.UserEntity;
 import com.example.demo.repository.UserRepository;
 
-@Service("userDetailsServiceImpl") 
+@Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     private final UserRepository userRepository;

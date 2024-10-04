@@ -48,11 +48,22 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         
         .csrf().disable()
         .authorizeRequests()
-        .antMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/v3/api-docs/swagger-config").permitAll() // Allow access to Swagger UI and API docs
-        .antMatchers("/products/**").hasRole("ADMIN") // Protect other endpoints
+        .antMatchers("/swagger-ui.html", "/swagger-ui/**", "/v3/api-docs/**", "/v3/api-docs/swagger-config").authenticated() // Allow access to Swagger UI and API docs
+//        .antMatchers("/products/**").hasAnyRole("ADMIN", "USER") 
+        .antMatchers("/products/**").hasRole("USER") // Protect other endpoints
         .anyRequest().authenticated()
         .and()
         .httpBasic();
+        
+//        .antMatcher("/swagger-ui/**")
+//        .authorizeRequests()
+//        .anyRequest().authenticated() // Require authentication for Swagger UI
+//        .and()
+//        .httpBasic() // Use HTTP Basic authentication
+//        .and()
+//        .csrf().disable();
+//        
+        
         
 //        .csrf().disable()
 //        .authorizeRequests()
