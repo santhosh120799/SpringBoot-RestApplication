@@ -14,9 +14,17 @@ public class UserEntity {
     private String password;
     private String role; 
 
+<<<<<<< HEAD
     public UserEntity() {
     }
 
+=======
+  
+    public UserEntity() {
+    }
+
+   
+>>>>>>> b852cf947fa07b6bd9904971237b6854d489a7f2
     public UserEntity(String username, String password, String role) {
         this.username = username;
         this.password = password;

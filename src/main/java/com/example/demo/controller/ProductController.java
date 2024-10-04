@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.demo.entity.ProductEntity;
 import com.example.demo.service.ProductService;
 
-// Swagger annotations are not needed for SpringDoc OpenAPI
+
 @RestController
 @RequestMapping("/products")
 public class ProductController {
